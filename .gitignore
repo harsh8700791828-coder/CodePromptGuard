@@ -1,0 +1,19 @@
+# Inside codepromptguard folder
+
+# Create .gitignore (files to NOT track)
+cat > .gitignore << EOF
+__pycache__/
+*.pyc
+.env
+.vscode/
+*.json~
+EOF
+
+# Add everything to git
+git add .
+
+# Make first commit
+git commit -m "Step 1: Clarity dimension scoring"
+
+# Optional: Push to GitHub
+# (If you have GitHub account)
