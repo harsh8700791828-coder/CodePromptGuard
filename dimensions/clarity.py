@@ -1,117 +1,77 @@
 """
-Dimension 1: Clarity & Specificity
-Measures how clearly the prompt specifies what to build
+Clarity dimension scorer — checks structural completeness, not just word presence.
 """
 
-import re
-
-
-def measure_clarity(prompt: str) -> dict:
-    """
-    Score clarity of a prompt (0-100)
-    
-    Checks for:
-    - Input/output format specified?
-    - Constraints mentioned?
-    - Examples provided?
-    - Error conditions addressed?
-    """
-    
+def score_clarity(prompt_text):
+    text = prompt_text.lower()
     score = 0
-    details = {}
-    
-    # Check 1: Is input/output format mentioned?
-    has_io_format = bool(re.search(
-        r'(input|output|format|returns?|accept)',
-        prompt,
-        re.IGNORECASE
-    ))
-    
-    if has_io_format:
-        score += 25  # Important
-        details['input_output_format'] = 'YES'
-    else:
-        details['input_output_format'] = 'NO'
-    
-    # Check 2: Are constraints mentioned?
-    has_constraints = bool(re.search(
-        r'(constraint|limit|time|space|complexity|efficient)',
-        prompt,
-        re.IGNORECASE
-    ))
-    
-    if has_constraints:
-        score += 25  # Important
-        details['constraints_specified'] = 'YES'
-    else:
-        details['constraints_specified'] = 'NO'
-    
-    # Check 3: Are examples provided?
-    has_examples = bool(re.search(
-        r'(example|e\.g|test case|instance|for instance)',
-        prompt,
-        re.IGNORECASE
-    ))
-    
-    if has_examples:
-        score += 25  # Very important
-        details['examples_provided'] = 'YES'
-    else:
-        details['examples_provided'] = 'NO'
-    
-    # Check 4: Is error handling mentioned?
-    has_error_handling = bool(re.search(
-        r'(error|exception|invalid|invalid input|edge case)',
-        prompt,
-        re.IGNORECASE
-    ))
-    
-    if has_error_handling:
-        score += 25  # Important
-        details['error_handling_mentioned'] = 'YES'
-    else:
-        details['error_handling_mentioned'] = 'NO'
-    
+    reasons = []
+
+    # Has a clear action verb at start
+    action_verbs = [
+        'implement', 'write', 'create', 'build', 'design',
+        'develop', 'calculate', 'find', 'detect', 'generate',
+        'parse', 'convert', 'validate', 'check', 'return'
+    ]
+    if any(text.strip().startswith(v) for v in action_verbs):
+        score += 20
+        reasons.append("+20: starts with clear action verb")
+    elif any(v in text for v in action_verbs):
+        score += 10
+        reasons.append("+10: contains action verb")
+
+    # Specifies what to return
+    if any(phrase in text for phrase in [
+        'return', 'output', 'result', 'print', 'yield'
+    ]):
+        score += 15
+        reasons.append("+15: specifies expected output")
+
+    # Specifies input format
+    if any(phrase in text for phrase in [
+        'input', 'given', 'takes', 'accepts', 'parameter',
+        'argument', 'array', 'string', 'integer', 'list', 'dict'
+    ]):
+        score += 15
+        reasons.append("+15: describes input")
+
+    # Has constraints or requirements
+    if any(phrase in text for phrase in [
+        'must', 'should', 'cannot', 'only', 'always',
+        'never', 'exactly', 'at least', 'at most'
+    ]):
+        score += 15
+        reasons.append("+15: has explicit constraints")
+
+    # Reasonable length (too short = vague, too long = cluttered)
+    word_count = len(prompt_text.split())
+    if 10 <= word_count <= 80:
+        score += 20
+        reasons.append(f"+20: good length ({word_count} words)")
+    elif word_count < 5:
+        score -= 20
+        reasons.append(f"-20: too short ({word_count} words), likely vague")
+    elif word_count > 150:
+        score -= 5
+        reasons.append(f"-5: very long ({word_count} words), may be cluttered")
+
+    # Has multiple sentences = more structured
+    sentence_count = text.count('.') + text.count('?') + text.count('\n')
+    if sentence_count >= 2:
+        score += 15
+        reasons.append("+15: multi-sentence, structured")
+
     return {
-        'clarity_score': score,  # 0-100
-        'breakdown': details
+        'score': max(0, min(100, score)),
+        'reasons': reasons
     }
 
 
-# Test it
-if __name__ == "__main__":
-    
-    # Test prompt 1: Poor clarity
-    bad_prompt = "Write a function to sort things"
-    
-    print("Testing BAD prompt:")
-    print(f"'{bad_prompt}'")
-    result1 = measure_clarity(bad_prompt)
-    print(f"Score: {result1['clarity_score']}/100")
-    print(f"Breakdown: {result1['breakdown']}")
-    print()
-    
-    # Test prompt 2: Good clarity
-    good_prompt = """
-    Write a function to sort an array of integers in ascending order.
-    
-    Input: list of integers
-    Output: same list, sorted
-    
-    Constraints:
-    - Must be O(n log n) or better
-    - In-place sorting preferred
-    
-    Examples:
-    sort([3, 1, 4, 1, 5]) -> [1, 1, 3, 4, 5]
-    sort([]) -> []
-    sort([1]) -> [1]
-    
-    Handle edge cases: empty list, duplicate elements, negative numbers
-    """
-    
-    print("Testing GOOD prompt:")
-    print(f"'{good_prompt}'")
-    result2 = measure_clarity(good_prompt)
-    print(f"Score: {result2['clarity_score']}/100")
-    print(f"Breakdown: {result2['breakdown']}")
+def measure_clarity(prompt: str) -> dict:
+    result = score_clarity(prompt)
+    return {
+        'clarity_score': result['score'],
+        'breakdown': {
+            'reasons': result['reasons']
+        }
+    }

@@ -1,167 +1,84 @@
 """
-Dimension 4: Context & Dependency Management
-Measures if prompt specifies dependencies, imports, and context clearly
+Context dimension — checks if prompt provides enough background for accurate generation.
 """
 
-import re
-
-
-def measure_context(prompt: str) -> dict:
-    """
-    Score context clarity in a prompt (0-100)
-    
-    Checks for:
-    - Libraries/imports mentioned?
-    - Language version specified?
-    - Data structures explained?
-    - Assumptions stated?
-    - Pre/post conditions?
-    """
-    
+def score_context(prompt_text):
+    text = prompt_text.lower()
     score = 0
-    details = {}
-    
-    # Check 1: Libraries/imports mentioned?
-    import_keywords = [
-        'import',
-        'library',
-        'module',
-        'package',
-        'require',
-        'use this',
-        'numpy',
-        'pandas',
-        'requests'
+    reasons = []
+
+    # Specifies programming language
+    languages = [
+        'python', 'java', 'javascript', 'c++', 'typescript',
+        'go', 'rust', 'kotlin', 'swift', 'ruby'
     ]
-    
-    import_mentions = sum(1 for kw in import_keywords if kw in prompt.lower())
-    
-    if import_mentions >= 1:
+    if any(lang in text for lang in languages):
+        score += 25
+        reasons.append("+25: specifies programming language")
+
+    # Specifies data structure or type
+    if any(phrase in text for phrase in [
+        'array', 'list', 'string', 'integer', 'float',
+        'dictionary', 'dict', 'set', 'tree', 'graph',
+        'linked list', 'stack', 'queue', 'tuple'
+    ]):
         score += 20
-        details['dependencies_mentioned'] = f'{import_mentions} found'
-    else:
-        details['dependencies_mentioned'] = 'NO'
-    
-    # Check 2: Language/version specified?
-    version_keywords = [
-        'python',
-        'version',
-        '3.8',
-        '3.9',
-        '3.10',
-        '3.11',
-        'java',
-        'javascript'
-    ]
-    
-    version_mentioned = any(kw in prompt.lower() for kw in version_keywords)
-    
-    if version_mentioned:
+        reasons.append("+20: specifies data types")
+
+    # Mentions performance requirements
+    if any(phrase in text for phrase in [
+        'o(n)', 'o(log n)', 'o(1)', 'time complexity',
+        'space complexity', 'efficient', 'optimize',
+        'in-place', 'constant space'
+    ]):
         score += 20
-        details['language_version'] = 'YES'
-    else:
-        details['language_version'] = 'NO'
-    
-    # Check 3: Data structures explained?
-    datastructure_keywords = [
-        'list',
-        'dict',
-        'set',
-        'array',
-        'matrix',
-        'graph',
-        'tree',
-        'tuple',
-        'queue',
-        'stack'
-    ]
-    
-    datastructure_mentions = sum(1 for ds in datastructure_keywords if ds in prompt.lower())
-    
-    if datastructure_mentions >= 1:
+        reasons.append("+20: mentions complexity/performance")
+
+    # Mentions constraints on input
+    if any(phrase in text for phrase in [
+        'sorted', 'unsorted', 'positive', 'non-negative',
+        'distinct', 'unique', 'size', 'length', 'range'
+    ]):
         score += 20
-        details['datastructures_mentioned'] = f'{datastructure_mentions} found'
-    else:
-        details['datastructures_mentioned'] = 'NO'
-    
-    # Check 4: Assumptions/preconditions stated?
-    assumption_keywords = [
-        'assume',
-        'given',
-        'suppose',
-        'precondition',
-        'prerequisite',
-        'requires'
-    ]
-    
-    assumption_mentioned = any(kw in prompt.lower() for kw in assumption_keywords)
-    
-    if assumption_mentioned:
+        reasons.append("+20: specifies input constraints")
+
+    # Validation context signals
+    if any(phrase in text for phrase in [
+        'digits', 'characters', 'format', 'length',
+        'starts with', 'prefix', 'suffix',
+        '10 digits', '6 digits', '12 digits',
+        'alphanumeric', 'numeric', 'letters'
+    ]):
         score += 20
-        details['assumptions_stated'] = 'YES'
-    else:
-        details['assumptions_stated'] = 'NO'
-    
-    # Check 5: Environment or setup mentioned?
-    setup_keywords = [
-        'setup',
-        'install',
-        'environment',
-        'python path',
-        'working directory'
-    ]
-    
-    setup_mentioned = any(kw in prompt.lower() for kw in setup_keywords)
-    
-    if setup_mentioned:
-        score += 20
-        details['setup_instructions'] = 'YES'
-    else:
-        details['setup_instructions'] = 'NO'
-    
+        reasons.append("+20: specifies format/length constraints")
+
+    # Indian domain context
+    if any(phrase in text for phrase in [
+        'indian', 'india', '+91', 'aadhaar', 'pan',
+        'gst', 'pincode', 'mobile number'
+    ]):
+        score += 15
+        reasons.append("+15: domain context specified")
+
+    # General domain context
+    if any(phrase in text for phrase in [
+        'api', 'database', 'file', 'network', 'web',
+        'class', 'object', 'module', 'library'
+    ]):
+        score += 15
+        reasons.append("+15: provides domain context")
+
     return {
-        'context_score': min(100, score),  # Clamp to 100
-        'breakdown': details
+        'score': max(0, min(100, score)),
+        'reasons': reasons
     }
 
 
-# Test it
-if __name__ == "__main__":
-    
-    # Test prompt 1: No context
-    bad_prompt = "Write a web scraper"
-    
-    print("Testing WEAK context:")
-    print(f"'{bad_prompt}'")
-    result1 = measure_context(bad_prompt)
-    print(f"Score: {result1['context_score']}/100")
-    print(f"Breakdown: {result1['breakdown']}")
-    print()
-    
-    # Test prompt 2: Good context
-    good_prompt = """
-    Write a web scraper in Python 3.10.
-    
-    Dependencies:
-    - requests library (for HTTP)
-    - BeautifulSoup4 (for HTML parsing)
-    
-    Input: URL (string)
-    Output: dict with {title, paragraphs[], links[]}
-    
-    Assume:
-    - URL is valid
-    - Page is valid HTML
-    - No authentication required
-    
-    Data structures used:
-    - list for paragraphs
-    - list for links
-    - dict for output
-    """
-    
-    print("Testing STRONG context:")
-    print(f"'{good_prompt}'")
-    result2 = measure_context(good_prompt)
-    print(f"Score: {result2['context_score']}/100")
-    print(f"Breakdown: {result2['breakdown']}")
+def measure_context(prompt: str) -> dict:
+    result = score_context(prompt)
+    return {
+        'context_score': result['score'],
+        'breakdown': {
+            'reasons': result['reasons']
+        }
+    }

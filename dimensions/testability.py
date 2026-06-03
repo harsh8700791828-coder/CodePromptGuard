@@ -1,136 +1,63 @@
 """
-Dimension 5: Testability & Verification
-Measures how well the prompt specifies testing and verification
+Testability dimension — checks if prompt makes output verifiable.
 """
 
-import re
-
-
-def measure_testability(prompt: str) -> dict:
-    """
-    Score testability in a prompt (0-100)
-    
-    Checks for:
-    - Test cases provided?
-    - Expected outputs specified?
-    - Verification method clear?
-    - Performance requirements?
-    """
-    
+def score_testability(prompt_text):
+    text = prompt_text.lower()
     score = 0
-    details = {}
-    
-    # Check 1: Test cases/examples provided?
-    test_keywords = [
-        'test',
-        'example',
-        'case',
-        'input',
-        'output',
-        '->',  # Arrow notation like: [1,2] -> [2,1]
-        'expected'
-    ]
-    
-    test_mentions = sum(1 for kw in test_keywords if kw in prompt.lower())
-    
-    if test_mentions >= 2:  # Need at least 2 mentions
+    reasons = []
+
+    # Provides concrete examples
+    if any(phrase in text for phrase in [
+        'example', 'for example', 'e.g.', 'such as',
+        'sample', 'instance', 'demonstration'
+    ]):
         score += 25
-        details['test_cases'] = f'{test_mentions} mentions'
-    else:
-        details['test_cases'] = 'NO'
-    
-    # Check 2: Expected output format specified?
-    output_keywords = [
-        'return',
-        'output',
-        'result',
-        'should return',
-        'yields'
-    ]
-    
-    output_mentioned = any(kw in prompt.lower() for kw in output_keywords)
-    
-    if output_mentioned:
+        reasons.append("+25: provides examples")
+
+    # Return type specification counts as testable output
+    if any(phrase in text for phrase in [
+        'return {', 'return true', 'return false',
+        'valid:', 'bool', 'errors:', '{valid',
+        'standardized format', 'standardized',
+        'validation result'
+    ]):
         score += 25
-        details['output_format'] = 'YES'
-    else:
-        details['output_format'] = 'NO'
-    
-    # Check 3: Pass/fail criteria clear?
-    criteria_keywords = [
-        'pass',
-        'fail',
-        'correct',
-        'valid',
-        'success',
-        'should work'
-    ]
-    
-    criteria_mentioned = any(kw in prompt.lower() for kw in criteria_keywords)
-    
-    if criteria_mentioned:
+        reasons.append("+25: specifies structured return type")
+
+    # Specifies expected output format
+    if any(phrase in text for phrase in [
+        'return true', 'return false', 'return -1',
+        'return none', 'returns a list', 'returns a dict',
+        'output should be', 'result should'
+    ]):
         score += 25
-        details['success_criteria'] = 'YES'
-    else:
-        details['success_criteria'] = 'NO'
-    
-    # Check 4: Performance requirements?
-    perf_keywords = [
-        'time',
-        'space',
-        'complexity',
-        'o(',
-        'efficient',
-        'fast',
-        'second',
-        'millisecond'
-    ]
-    
-    perf_mentioned = any(kw in prompt.lower() for kw in perf_keywords)
-    
-    if perf_mentioned:
+        reasons.append("+25: specifies exact output")
+
+    # Mentions test cases or assertions
+    if any(phrase in text for phrase in [
+        'test', 'assert', 'verify', 'unit test',
+        'should pass', 'must pass'
+    ]):
         score += 25
-        details['performance_specified'] = 'YES'
-    else:
-        details['performance_specified'] = 'NO'
-    
+        reasons.append("+25: mentions testing")
+
+    # Has input-output pair (>>> style or explicit)
+    if '>>>' in text or '->' in text or '=>' in text:
+        score += 25
+        reasons.append("+25: has input-output example")
+
     return {
-        'testability_score': min(100, score),
-        'breakdown': details
+        'score': max(0, min(100, score)),
+        'reasons': reasons
     }
 
 
-# Test it
-if __name__ == "__main__":
-    
-    # Test prompt 1: No testability info
-    bad_prompt = "Write a sorting function"
-    
-    print("Testing WEAK testability:")
-    print(f"'{bad_prompt}'")
-    result1 = measure_testability(bad_prompt)
-    print(f"Score: {result1['testability_score']}/100")
-    print(f"Breakdown: {result1['breakdown']}")
-    print()
-    
-    # Test prompt 2: Good testability
-    good_prompt = """
-    Write a function to reverse a list.
-    
-    Expected output: reversed list
-    
-    Test cases:
-    - [1, 2, 3] -> [3, 2, 1]
-    - [] -> []
-    - [1] -> [1]
-    
-    Success criteria: function returns reversed list correctly
-    
-    Performance: must be O(n) time, O(1) space
-    """
-    
-    print("Testing STRONG testability:")
-    print(f"'{good_prompt}'")
-    result2 = measure_testability(good_prompt)
-    print(f"Score: {result2['testability_score']}/100")
-    print(f"Breakdown: {result2['breakdown']}")
+def measure_testability(prompt: str) -> dict:
+    result = score_testability(prompt)
+    return {
+        'testability_score': result['score'],
+        'breakdown': {
+            'reasons': result['reasons']
+        }
+    }
