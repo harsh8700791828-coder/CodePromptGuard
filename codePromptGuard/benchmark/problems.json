@@ -1,0 +1,3165 @@
+{
+  "problems": [
+    {
+      "id": "algo-easy-001",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "FizzBuzz",
+      "description": "Write a function that returns FizzBuzz for numbers 1 to n. For multiples of 3, return 'Fizz'. For multiples of 5, return 'Buzz'. For multiples of both, return 'FizzBuzz'. Otherwise return the number.",
+      "test_cases": [
+        {
+          "input": 1,
+          "expected": "1"
+        },
+        {
+          "input": 3,
+          "expected": "Fizz"
+        },
+        {
+          "input": 5,
+          "expected": "Buzz"
+        },
+        {
+          "input": 15,
+          "expected": "FizzBuzz"
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-002",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "Palindrome Check",
+      "description": "Write a function to check if a string is a palindrome (reads same forwards and backwards). Ignore spaces and case.",
+      "test_cases": [
+        {
+          "input": "racecar",
+          "expected": true
+        },
+        {
+          "input": "hello",
+          "expected": false
+        },
+        {
+          "input": "A man a plan a canal Panama",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-003",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "Reverse String",
+      "description": "Write a function to reverse a string.",
+      "test_cases": [
+        {
+          "input": "hello",
+          "expected": "olleh"
+        },
+        {
+          "input": "",
+          "expected": ""
+        },
+        {
+          "input": "a",
+          "expected": "a"
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-004",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "Sum of Array",
+      "description": "Write a function to sum all numbers in an array.",
+      "test_cases": [
+        {
+          "input": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "expected": 15
+        },
+        {
+          "input": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            -1,
+            -2,
+            -3
+          ],
+          "expected": -6
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-005",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "Find Maximum",
+      "description": "Write a function to find the maximum element in an array.",
+      "test_cases": [
+        {
+          "input": [
+            3,
+            1,
+            4,
+            1,
+            5
+          ],
+          "expected": 5
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            -5,
+            -2,
+            -10
+          ],
+          "expected": -2
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-006",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "Even or Odd",
+      "description": "Write a function that returns 'even' if number is even, 'odd' if odd.",
+      "test_cases": [
+        {
+          "input": 2,
+          "expected": "even"
+        },
+        {
+          "input": 3,
+          "expected": "odd"
+        },
+        {
+          "input": 0,
+          "expected": "even"
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-007",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "Factorial",
+      "description": "Write a function to calculate factorial of n.",
+      "test_cases": [
+        {
+          "input": 0,
+          "expected": 1
+        },
+        {
+          "input": 5,
+          "expected": 120
+        },
+        {
+          "input": 1,
+          "expected": 1
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-008",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "Count Vowels",
+      "description": "Write a function to count vowels in a string.",
+      "test_cases": [
+        {
+          "input": "hello",
+          "expected": 2
+        },
+        {
+          "input": "aeiou",
+          "expected": 5
+        },
+        {
+          "input": "xyz",
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-009",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "Remove Duplicates",
+      "description": "Write a function to remove duplicates from a list, return sorted unique elements.",
+      "test_cases": [
+        {
+          "input": [
+            1,
+            2,
+            2,
+            3,
+            3,
+            3
+          ],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "input": [
+            5,
+            5,
+            5
+          ],
+          "expected": [
+            5
+          ]
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-010",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "Is Prime",
+      "description": "Write a function to check if a number is prime.",
+      "test_cases": [
+        {
+          "input": 2,
+          "expected": true
+        },
+        {
+          "input": 4,
+          "expected": false
+        },
+        {
+          "input": 17,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-011",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "List Length",
+      "description": "Write a function to return the length of a list without using len().",
+      "test_cases": [
+        {
+          "input": [
+            1,
+            2,
+            3
+          ],
+          "expected": 3
+        },
+        {
+          "input": [],
+          "expected": 0
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected": 1
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-012",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "First Element",
+      "description": "Write a function to return the first element of a list.",
+      "test_cases": [
+        {
+          "input": [
+            1,
+            2,
+            3
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            99
+          ],
+          "expected": 99
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-013",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "Last Element",
+      "description": "Write a function to return the last element of a list.",
+      "test_cases": [
+        {
+          "input": [
+            1,
+            2,
+            3
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            99
+          ],
+          "expected": 99
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-014",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "Duplicate List",
+      "description": "Write a function that returns a list with each element duplicated.",
+      "test_cases": [
+        {
+          "input": [
+            1,
+            2,
+            3
+          ],
+          "expected": [
+            1,
+            1,
+            2,
+            2,
+            3,
+            3
+          ]
+        },
+        {
+          "input": [],
+          "expected": []
+        },
+        {
+          "input": [
+            5
+          ],
+          "expected": [
+            5,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-015",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "Absolute Value",
+      "description": "Write a function to return absolute value without using abs().",
+      "test_cases": [
+        {
+          "input": -5,
+          "expected": 5
+        },
+        {
+          "input": 5,
+          "expected": 5
+        },
+        {
+          "input": 0,
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-016",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "Swap Values",
+      "description": "Write a function to swap two variables without using a temp variable.",
+      "test_cases": [
+        {
+          "input": [
+            1,
+            2
+          ],
+          "expected": [
+            2,
+            1
+          ]
+        },
+        {
+          "input": [
+            0,
+            0
+          ],
+          "expected": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-017",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "Fibonacci",
+      "description": "Write a function to return the nth Fibonacci number.",
+      "test_cases": [
+        {
+          "input": 0,
+          "expected": 0
+        },
+        {
+          "input": 1,
+          "expected": 1
+        },
+        {
+          "input": 6,
+          "expected": 8
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-018",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "Power",
+      "description": "Write a function to calculate x raised to power n without using ** operator.",
+      "test_cases": [
+        {
+          "input": [
+            2,
+            3
+          ],
+          "expected": 8
+        },
+        {
+          "input": [
+            5,
+            0
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            2,
+            -2
+          ],
+          "expected": 0.25
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-019",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "GCD",
+      "description": "Write a function to find Greatest Common Divisor of two numbers.",
+      "test_cases": [
+        {
+          "input": [
+            12,
+            8
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            17,
+            19
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            0,
+            5
+          ],
+          "expected": 5
+        }
+      ]
+    },
+    {
+      "id": "algo-easy-020",
+      "category": "algorithmic",
+      "difficulty": "easy",
+      "title": "Character Count",
+      "description": "Write a function to count occurrences of a character in a string.",
+      "test_cases": [
+        {
+          "input": [
+            "hello",
+            "l"
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            "aaa",
+            "a"
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            "xyz",
+            "a"
+          ],
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-001",
+      "title": "Median Stream",
+      "description": "Find median of numbers as they arrive.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-002",
+      "title": "Skyline Problem",
+      "description": "Get skyline of buildings.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-003",
+      "title": "Merge K Lists",
+      "description": "Merge k sorted linked lists.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-004",
+      "title": "Largest Rectangle",
+      "description": "Find largest rectangle in histogram.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-005",
+      "title": "Critical Connections",
+      "description": "Find critical connections in network.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-006",
+      "title": "Min Window",
+      "description": "Find minimum window substring.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-007",
+      "title": "Serialize BST",
+      "description": "Serialize and deserialize binary search tree.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-008",
+      "title": "Word Ladder",
+      "description": "Find shortest path between words.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-009",
+      "title": "LRU Cache",
+      "description": "Implement Least Recently Used cache.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-010",
+      "title": "Alien Dictionary",
+      "description": "Derive order of alien dictionary.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-011",
+      "title": "Design Search",
+      "description": "Design search autocomplete system.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-012",
+      "title": "Sudoku Solver",
+      "description": "Solve sudoku puzzle.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-013",
+      "title": "N Queens",
+      "description": "Solve N-queens problem.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-014",
+      "title": "Word Break 2",
+      "description": "Word break with all combinations.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-015",
+      "title": "Palindrome Pairs",
+      "description": "Find indices where words form palindromes.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-016",
+      "title": "Distinct Sequences",
+      "description": "Count distinct subsequences.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-017",
+      "title": "Max Path",
+      "description": "Find maximum path sum in binary tree.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-018",
+      "title": "Regex Matcher",
+      "description": "Implement regex pattern matching.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-019",
+      "title": "Best Time Stock",
+      "description": "Best time to buy/sell with k transactions.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-hard-020",
+      "title": "Edit Distance",
+      "description": "Calculate edit distance between strings.",
+      "category": "algorithmic",
+      "difficulty": "hard",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-001",
+      "title": "SQL Injection Prevent",
+      "description": "Write function to prevent SQL injection attacks.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-002",
+      "title": "XSS Protection",
+      "description": "Sanitize HTML input to prevent XSS.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-003",
+      "title": "Password Validation",
+      "description": "Validate strong passwords.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-004",
+      "title": "Hash Password",
+      "description": "Hash password securely using bcrypt.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-005",
+      "title": "JWT Verification",
+      "description": "Verify JWT tokens securely.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-006",
+      "title": "CORS Handler",
+      "description": "Implement CORS security headers.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-007",
+      "title": "Rate Limiting",
+      "description": "Implement rate limiting for API.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-008",
+      "title": "HTTPS Check",
+      "description": "Ensure HTTPS connection.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-009",
+      "title": "Input Sanitization",
+      "description": "Sanitize all user inputs.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-010",
+      "title": "Environment Secrets",
+      "description": "Securely manage environment secrets.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-011",
+      "title": "Session Security",
+      "description": "Implement secure session handling.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-012",
+      "title": "CSRF Token",
+      "description": "Generate and validate CSRF tokens.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-013",
+      "title": "Encryption",
+      "description": "Implement data encryption.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-014",
+      "title": "Auth Header",
+      "description": "Validate authorization headers.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-015",
+      "title": "File Upload",
+      "description": "Secure file upload validation.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-016",
+      "title": "Dependency Check",
+      "description": "Check for vulnerable dependencies.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-017",
+      "title": "API Key",
+      "description": "Secure API key handling.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-018",
+      "title": "Data Masking",
+      "description": "Mask sensitive data in logs.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-019",
+      "title": "SSL Certificate",
+      "description": "Validate SSL certificates.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-020",
+      "title": "Audit Logging",
+      "description": "Implement secure audit logging.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-021",
+      "title": "Access Control",
+      "description": "Implement role-based access control.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-022",
+      "title": "Token Expiry",
+      "description": "Handle token expiration securely.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-023",
+      "title": "Injection Prevention",
+      "description": "Prevent code injection attacks.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-024",
+      "title": "Buffer Overflow",
+      "description": "Prevent buffer overflow attacks.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-025",
+      "title": "Replay Attack",
+      "description": "Prevent replay attacks.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-026",
+      "title": "Man-in-Middle",
+      "description": "Prevent man-in-the-middle attacks.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-027",
+      "title": "DoS Protection",
+      "description": "Implement DoS protection.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-028",
+      "title": "Content Security",
+      "description": "Implement Content Security Policy.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-029",
+      "title": "Secure Headers",
+      "description": "Set all secure HTTP headers.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-030",
+      "title": "OAuth Impl",
+      "description": "Implement OAuth 2.0 securely.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-031",
+      "title": "TLS Config",
+      "description": "Configure TLS properly.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-032",
+      "title": "Cert Pinning",
+      "description": "Implement certificate pinning.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-033",
+      "title": "API Rate Limit",
+      "description": "Add API rate limiting.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-034",
+      "title": "Error Handling",
+      "description": "Secure error message handling.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-035",
+      "title": "Logging",
+      "description": "Secure logging without secrets.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-036",
+      "title": "Validation",
+      "description": "Server-side input validation.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-037",
+      "title": "Serialization",
+      "description": "Secure object serialization.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-038",
+      "title": "Cookie Security",
+      "description": "Set secure cookie flags.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-039",
+      "title": "Request Signing",
+      "description": "Sign requests for verification.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "sec-040",
+      "title": "Data Integrity",
+      "description": "Verify data integrity with checksums.",
+      "category": "security",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-001",
+      "title": "REST GET",
+      "description": "Implement REST GET endpoint.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-002",
+      "title": "REST POST",
+      "description": "Implement REST POST endpoint with validation.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-003",
+      "title": "REST PUT",
+      "description": "Implement REST PUT for updates.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-004",
+      "title": "REST DELETE",
+      "description": "Implement REST DELETE endpoint.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-005",
+      "title": "Status Codes",
+      "description": "Return correct HTTP status codes.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-006",
+      "title": "JSON Response",
+      "description": "Format JSON responses correctly.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-007",
+      "title": "Query Params",
+      "description": "Parse query parameters from URL.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-008",
+      "title": "Path Params",
+      "description": "Extract path parameters from route.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-009",
+      "title": "Request Body",
+      "description": "Parse request body JSON.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-010",
+      "title": "Headers",
+      "description": "Read and set HTTP headers.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-011",
+      "title": "Cookies",
+      "description": "Handle cookies in requests.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-012",
+      "title": "Sessions",
+      "description": "Implement user sessions.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-013",
+      "title": "Authentication",
+      "description": "Basic authentication implementation.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-014",
+      "title": "Pagination",
+      "description": "Implement pagination for lists.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-015",
+      "title": "Filtering",
+      "description": "Filter data based on parameters.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-016",
+      "title": "Sorting",
+      "description": "Sort API results.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-017",
+      "title": "Search",
+      "description": "Implement search functionality.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-018",
+      "title": "Caching",
+      "description": "Implement response caching.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-019",
+      "title": "Compression",
+      "description": "Compress API responses.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-020",
+      "title": "CORS",
+      "description": "Handle CORS in API.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-021",
+      "title": "Versioning",
+      "description": "API versioning strategy.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-022",
+      "title": "Deprecation",
+      "description": "Deprecate old API endpoints.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-023",
+      "title": "WebSocket",
+      "description": "Implement WebSocket connection.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-024",
+      "title": "Streaming",
+      "description": "Stream large responses.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-025",
+      "title": "File Upload",
+      "description": "Handle file uploads in API.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-026",
+      "title": "File Download",
+      "description": "Serve file downloads.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-027",
+      "title": "Database Query",
+      "description": "Query database and return results.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-028",
+      "title": "Join Data",
+      "description": "Join data from multiple sources.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-029",
+      "title": "Aggregate",
+      "description": "Aggregate data for API response.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-030",
+      "title": "Transform",
+      "description": "Transform data format for API.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-031",
+      "title": "Error Response",
+      "description": "Format error responses properly.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-032",
+      "title": "Validation Error",
+      "description": "Return validation error details.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-033",
+      "title": "Rate Limit",
+      "description": "Implement API rate limiting.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-034",
+      "title": "Logging",
+      "description": "Log API requests and responses.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-035",
+      "title": "Monitoring",
+      "description": "Monitor API health.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-036",
+      "title": "Load Balancing",
+      "description": "Handle load balancing.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-037",
+      "title": "Circuit Breaker",
+      "description": "Implement circuit breaker pattern.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-038",
+      "title": "Retry",
+      "description": "Implement retry logic.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-039",
+      "title": "Timeout",
+      "description": "Set proper timeout values.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "web-040",
+      "title": "Fallback",
+      "description": "Implement fallback mechanism.",
+      "category": "web",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-001",
+      "title": "CSV Parser",
+      "description": "Parse CSV file.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-002",
+      "title": "JSON Parse",
+      "description": "Parse and validate JSON.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-003",
+      "title": "XML Parse",
+      "description": "Parse XML data.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-004",
+      "title": "Transform Data",
+      "description": "Transform data format.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-005",
+      "title": "Filter Records",
+      "description": "Filter records based on criteria.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-006",
+      "title": "Sort Records",
+      "description": "Sort records by field.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-007",
+      "title": "Aggregate",
+      "description": "Aggregate data (sum, avg, count).",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-008",
+      "title": "Group By",
+      "description": "Group records by field.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-009",
+      "title": "Join Data",
+      "description": "Join two datasets.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-010",
+      "title": "Deduplicate",
+      "description": "Remove duplicate records.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-011",
+      "title": "Missing Values",
+      "description": "Handle missing/null values.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-012",
+      "title": "Data Validation",
+      "description": "Validate data quality.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-013",
+      "title": "Type Conversion",
+      "description": "Convert data types.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-014",
+      "title": "String Cleaning",
+      "description": "Clean and normalize strings.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-015",
+      "title": "Date Parsing",
+      "description": "Parse and format dates.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-016",
+      "title": "Time Series",
+      "description": "Process time series data.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-017",
+      "title": "Calculate Stats",
+      "description": "Calculate statistics (mean, std dev).",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-018",
+      "title": "Percentile",
+      "description": "Calculate percentiles.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-019",
+      "title": "Correlation",
+      "description": "Calculate data correlation.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-020",
+      "title": "Normalize",
+      "description": "Normalize numerical data.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-021",
+      "title": "Encode Category",
+      "description": "Encode categorical data.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-022",
+      "title": "Text Process",
+      "description": "Process text data.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-023",
+      "title": "Tokenize",
+      "description": "Tokenize text.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-024",
+      "title": "Stemming",
+      "description": "Implement stemming.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-025",
+      "title": "POS Tag",
+      "description": "Part of speech tagging.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-026",
+      "title": "Sentiment",
+      "description": "Analyze sentiment in text.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-027",
+      "title": "NER",
+      "description": "Named entity recognition.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-028",
+      "title": "Data Merge",
+      "description": "Merge multiple datasets.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-029",
+      "title": "Data Split",
+      "description": "Split dataset into train/test.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-030",
+      "title": "Sampling",
+      "description": "Sample from large dataset.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-031",
+      "title": "Interpolation",
+      "description": "Interpolate missing data.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-032",
+      "title": "Smoothing",
+      "description": "Smooth noisy data.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-033",
+      "title": "Outliers",
+      "description": "Detect and handle outliers.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-034",
+      "title": "Compression",
+      "description": "Compress data.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-035",
+      "title": "Serialization",
+      "description": "Serialize data.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-036",
+      "title": "Caching",
+      "description": "Cache data for performance.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-037",
+      "title": "Indexing",
+      "description": "Create index for fast lookup.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-038",
+      "title": "Query Optimize",
+      "description": "Optimize data queries.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-039",
+      "title": "Memory Optimize",
+      "description": "Optimize memory usage.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "data-040",
+      "title": "Streaming",
+      "description": "Process streaming data.",
+      "category": "data",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-001",
+      "title": "GST Calc",
+      "description": "Calculate GST (Goods and Services Tax) for items in India. GST rates: 5%, 12%, 18%, 28%. Handle rounding to 2 decimals.",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-002",
+      "title": "Aadhaar Validation",
+      "description": "Validate Indian Aadhaar number (12 digits). Check format and Verhoeff algorithm.",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-003",
+      "title": "PAN Validation",
+      "description": "Validate PAN (Permanent Account Number) format in India.",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-004",
+      "title": "Phone Number",
+      "description": "Validate Indian mobile phone numbers (10 digits, starting with 6-9).",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-005",
+      "title": "Pincode",
+      "description": "Validate Indian pincode (6 digits).",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-006",
+      "title": "IFSC Code",
+      "description": "Validate IFSC bank code format.",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-007",
+      "title": "Bank Account",
+      "description": "Validate Indian bank account number.",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-008",
+      "title": "Vehicle Number",
+      "description": "Parse Indian vehicle registration number.",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-009",
+      "title": "Driving License",
+      "description": "Validate Indian driving license number.",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-010",
+      "title": "Passport",
+      "description": "Validate Indian passport number.",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-011",
+      "title": "Hindi Text",
+      "description": "Process Hindi text (Devanagari script).",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-012",
+      "title": "Date Format",
+      "description": "Handle Indian date formats (DD-MM-YYYY).",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-013",
+      "title": "Currency Format",
+      "description": "Format Indian Rupees (\u20b9) with proper comma placement.",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-014",
+      "title": "Address Standardize",
+      "description": "Standardize Indian addresses.",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-015",
+      "title": "Election Commission",
+      "description": "Validate Election Commission ID format.",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-016",
+      "title": "State Code",
+      "description": "Validate Indian state codes.",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-017",
+      "title": "District List",
+      "description": "Get district list for state.",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-018",
+      "title": "Religion Code",
+      "description": "Handle Indian religion/caste data.",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-019",
+      "title": "Language Code",
+      "description": "Handle Indian language codes.",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "indian-020",
+      "title": "Voter ID",
+      "description": "Validate Indian voter ID number.",
+      "category": "indian",
+      "difficulty": "medium",
+      "test_cases": [
+        {
+          "input": "example",
+          "expected": "output"
+        }
+      ]
+    },
+    {
+      "id": "algo-med-001",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Binary Search",
+      "description": "Implement binary search on a sorted array. Return index of target or -1 if not found.",
+      "test_cases": [
+        {
+          "input": [
+            [
+              1,
+              3,
+              5,
+              7,
+              9
+            ],
+            5
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            [
+              1,
+              3,
+              5,
+              7,
+              9
+            ],
+            4
+          ],
+          "expected": -1
+        },
+        {
+          "input": [
+            [
+              1
+            ],
+            1
+          ],
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "id": "algo-med-002",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Two Sum",
+      "description": "Given an array and a target sum, find two numbers that add up to target. Return indices.",
+      "test_cases": [
+        {
+          "input": [
+            [
+              2,
+              7,
+              11,
+              15
+            ],
+            9
+          ],
+          "expected": [
+            0,
+            1
+          ]
+        },
+        {
+          "input": [
+            [
+              3,
+              3
+            ],
+            6
+          ],
+          "expected": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algo-med-003",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Reverse Integer",
+      "description": "Reverse the digits of an integer. Handle negative numbers.",
+      "test_cases": [
+        {
+          "input": 123,
+          "expected": 321
+        },
+        {
+          "input": -123,
+          "expected": -321
+        },
+        {
+          "input": 120,
+          "expected": 21
+        }
+      ]
+    },
+    {
+      "id": "algo-med-004",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Merge Sorted Arrays",
+      "description": "Merge two sorted arrays into one sorted array.",
+      "test_cases": [
+        {
+          "input": [
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              6
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "input": [
+            [],
+            [
+              1
+            ]
+          ],
+          "expected": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algo-med-005",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Remove Element",
+      "description": "Remove all instances of a value from array in-place. Return new length.",
+      "test_cases": [
+        {
+          "input": [
+            [
+              3,
+              2,
+              2,
+              3
+            ],
+            3
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            [
+              0,
+              1,
+              2,
+              2,
+              3,
+              0,
+              4,
+              2
+            ],
+            2
+          ],
+          "expected": 5
+        }
+      ]
+    },
+    {
+      "id": "algo-med-006",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Rotate Array",
+      "description": "Rotate array right by k steps. Do it in-place.",
+      "test_cases": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            2
+          ],
+          "expected": [
+            4,
+            5,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "input": [
+            [
+              1
+            ],
+            1
+          ],
+          "expected": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algo-med-007",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Contains Duplicate",
+      "description": "Check if array contains duplicate elements.",
+      "test_cases": [
+        {
+          "input": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "expected": false
+        }
+      ]
+    },
+    {
+      "id": "algo-med-008",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Valid Parentheses",
+      "description": "Check if parentheses string is valid. (), {}, [] must match.",
+      "test_cases": [
+        {
+          "input": "()",
+          "expected": true
+        },
+        {
+          "input": "()[]{}",
+          "expected": true
+        },
+        {
+          "input": "(]",
+          "expected": false
+        }
+      ]
+    },
+    {
+      "id": "algo-med-009",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Longest Substring",
+      "description": "Find longest substring without repeating characters.",
+      "test_cases": [
+        {
+          "input": "abcabcbb",
+          "expected": 3
+        },
+        {
+          "input": "bbbbb",
+          "expected": 1
+        },
+        {
+          "input": "pwwkew",
+          "expected": 3
+        }
+      ]
+    },
+    {
+      "id": "algo-med-010",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Add Two Numbers",
+      "description": "Given two linked lists representing numbers in reverse, add them and return result.",
+      "test_cases": [
+        {
+          "input": "[[2, 4, 3], [5, 6, 4]]",
+          "expected": "[7, 0, 8]"
+        }
+      ]
+    },
+    {
+      "id": "algo-med-011",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Median Sorted Arrays",
+      "description": "Find median of two sorted arrays.",
+      "test_cases": [
+        {
+          "input": [
+            [
+              1,
+              3
+            ],
+            [
+              2
+            ]
+          ],
+          "expected": 2.0
+        },
+        {
+          "input": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "expected": 2.5
+        }
+      ]
+    },
+    {
+      "id": "algo-med-012",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Zigzag Conversion",
+      "description": "Convert string in zigzag pattern with n rows.",
+      "test_cases": [
+        {
+          "input": [
+            "PAYPALISHIRING",
+            3
+          ],
+          "expected": "PAHNAPLSIIGYIR"
+        }
+      ]
+    },
+    {
+      "id": "algo-med-013",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "String to Integer",
+      "description": "Convert string to integer. Handle whitespace, signs, overflow.",
+      "test_cases": [
+        {
+          "input": "42",
+          "expected": 42
+        },
+        {
+          "input": "  -42",
+          "expected": -42
+        },
+        {
+          "input": "4193 with words",
+          "expected": 4193
+        }
+      ]
+    },
+    {
+      "id": "algo-med-014",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Regular Expression Match",
+      "description": "Match string with pattern (simplified regex with . and *).",
+      "test_cases": [
+        {
+          "input": [
+            "aa",
+            "a"
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            "aa",
+            "a*"
+          ],
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": "algo-med-015",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Container Water",
+      "description": "Given heights, find two lines that form container with maximum water.",
+      "test_cases": [
+        {
+          "input": [
+            1,
+            8,
+            6,
+            2,
+            5,
+            4,
+            8,
+            3,
+            7
+          ],
+          "expected": 49
+        }
+      ]
+    },
+    {
+      "id": "algo-med-016",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "3Sum",
+      "description": "Find all unique triplets that sum to zero.",
+      "test_cases": [
+        {
+          "input": [
+            -1,
+            0,
+            1,
+            2,
+            -1,
+            -4
+          ],
+          "expected": [
+            [
+              -1,
+              -1,
+              2
+            ],
+            [
+              -1,
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algo-med-017",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Trapping Rain Water",
+      "description": "Calculate how much rain water is trapped after raining on heights.",
+      "test_cases": [
+        {
+          "input": [
+            0,
+            1,
+            0,
+            2,
+            1,
+            0,
+            1,
+            3,
+            2,
+            1,
+            2,
+            1
+          ],
+          "expected": 6
+        }
+      ]
+    },
+    {
+      "id": "algo-med-018",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Multiply Strings",
+      "description": "Multiply two numbers represented as strings.",
+      "test_cases": [
+        {
+          "input": [
+            "123",
+            "456"
+          ],
+          "expected": "56088"
+        },
+        {
+          "input": [
+            "0",
+            "456"
+          ],
+          "expected": "0"
+        }
+      ]
+    },
+    {
+      "id": "algo-med-019",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Wildcard Matching",
+      "description": "Match string with wildcard pattern (* matches any, ? matches single).",
+      "test_cases": [
+        {
+          "input": [
+            "aa",
+            "a"
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            "aa",
+            "*"
+          ],
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": "algo-med-020",
+      "category": "algorithmic",
+      "difficulty": "medium",
+      "title": "Jump Game",
+      "description": "Determine if you can jump to last index of array.",
+      "test_cases": [
+        {
+          "input": [
+            2,
+            3,
+            1,
+            1,
+            4
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            3,
+            2,
+            1,
+            0,
+            4
+          ],
+          "expected": false
+        }
+      ]
+    }
+  ]
+}

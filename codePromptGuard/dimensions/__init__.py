@@ -1,0 +1,1 @@
+"""Prompt health scoring dimensions."""

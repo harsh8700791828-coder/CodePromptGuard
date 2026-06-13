@@ -1,0 +1,11 @@
+{
+  "prompts": [
+    {
+      "id": "student-001",
+      "source": "studenteval",
+      "title": "",
+      "text": "def add_up(arr):\n    \"\"\"\n    takes a list of strings, integers, and floats and returns the sum of all the integers and floats.\n    \"\"\"\n    ",
+      "passed": false
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+ ======================================================================
+PASS@1 EXPERIMENT v2 — TYPE-AWARE REPAIR
+======================================================================
+
+[student-manual-001] Reverse Words
+  Generating from ORIGINAL... Pass@1 = 1.0
+  Repairing prompt... [algorithm] Score 0.0 → 27.5, fixed: ['clarity', 'context', 'testability', 'edge_cases']
+  Generating from REPAIRED... Pass@1 = 1.0
+
+[student-manual-002] Count Words
+  Generating from ORIGINAL... Pass@1 = 1.0
+  Repairing prompt... [algorithm] Score 8.5 → 37.0, fixed: ['clarity', 'context', 'testability', 'edge_cases']
+  Generating from REPAIRED... Pass@1 = 1.0
+
+[student-manual-003] Find Duplicates
+  Generating from ORIGINAL... Pass@1 = 1.0
+  Repairing prompt... [algorithm] Score 15.5 → 60.2, fixed: ['clarity', 'context', 'testability', 'edge_cases']
+  Generating from REPAIRED... Pass@1 = 1.0
+
+[student-manual-004] Check Sorted
+  Generating from ORIGINAL... Pass@1 = 1.0
+  Repairing prompt... [algorithm] Score 18.5 → 59.8, fixed: ['clarity', 'testability', 'edge_cases']
+  Generating from REPAIRED... Pass@1 = 1.0
+
+[student-001] 
+  Generating from ORIGINAL... Pass@1 = 1.0
+  Repairing prompt... [general] Score 22.8 → 55.0, fixed: ['error_handling', 'context', 'edge_cases']
+  Generating from REPAIRED... Pass@1 = 1.0
+
+[custom-001] GST Calculator
+  Generating from ORIGINAL... Pass@1 = 1.0
+  Repairing prompt... [software] Score 32.8 → 57.5, fixed: ['security', 'context', 'testability']
+  Generating from REPAIRED... Pass@1 = 1.0
+
+[custom-002] Aadhaar Validator
+  Generating from ORIGINAL... Pass@1 = 0.0
+  Repairing prompt... [software] Score 42.5 → 54.0, fixed: ['error_handling', 'security', 'testability']
+  Generating from REPAIRED... Pass@1 = 0.0
+
+[custom-003] PAN Validator
+  Generating from ORIGINAL... Pass@1 = 0.0
+  Repairing prompt... [software] Score 33.8 → 67.5, fixed: ['error_handling', 'security', 'context', 'testability', 'edge_cases']
+  Generating from REPAIRED... Pass@1 = 0.0
+
+[custom-004] Phone Validator
+  Generating from ORIGINAL... Pass@1 = 0.0
+  Repairing prompt... [software] Score 30.8 → 68.0, fixed: ['error_handling', 'security', 'context', 'testability', 'edge_cases']
+  Generating from REPAIRED... Pass@1 = 1.0
+
+[custom-005] Pincode Validator
+  Generating from ORIGINAL... Pass@1 = 0.33
+  Repairing prompt... [software] Score 36.2 → 59.5, fixed: ['error_handling', 'security', 'context', 'testability']
+  Generating from REPAIRED... Pass@1 = 0.33
+
+[lcb-001] A. Short Sort
+  Generating from ORIGINAL... Pass@1 = 0.0
+  Repairing prompt... [algorithm] Score 41.5 → 41.5, fixed: ['edge_cases']
+  Generating from REPAIRED... Pass@1 = 0.0
+
+[lcb-006] A. Game with Integers
+  Generating from ORIGINAL... Pass@1 = 0.0
+  Repairing prompt... [algorithm] Score 30.5 → 51.2, fixed: ['context', 'edge_cases']
+  Generating from REPAIRED... Pass@1 = 0.0
+
+[lcb-010] number-of-senior-citizens
+  Generating from ORIGINAL... Pass@1 = 1.0
+  Repairing prompt... [general] Score 29.2 → 30.8, fixed: ['error_handling', 'edge_cases']
+  Generating from REPAIRED... Pass@1 = 1.0
+
+[lcb-015] buy-two-chocolates
+  Generating from ORIGINAL... Pass@1 = 1.0
+  Repairing prompt... [algorithm] Score 47.0 → 47.0, fixed: ['testability']
+  Generating from REPAIRED... Pass@1 = 1.0
+
+[lcb-024] minimum-string-length-after-removing-substrings
+  Generating from ORIGINAL... Pass@1 = 0.33
+  Repairing prompt... [algorithm] Score 37.5 → 46.0, fixed: ['testability', 'edge_cases']
+  Generating from REPAIRED... Pass@1 = 0.33
+
+[lcb-032] remove-trailing-zeros-from-a-string
+  Generating from ORIGINAL... Pass@1 = 1.0
+  Repairing prompt... [algorithm] Score 46.5 → 50.8, fixed: ['testability', 'edge_cases']
+  Generating from REPAIRED... Pass@1 = 1.0
+
+[lcb-033] check-if-the-number-is-fascinating
+  Generating from ORIGINAL... Pass@1 = 1.0
+  Repairing prompt... [general] Score 37.0 → 56.5, fixed: ['error_handling', 'edge_cases']
+  Generating from REPAIRED... Pass@1 = 1.0
+
+[lcb-035] greatest-common-divisor-traversal
+  Generating from ORIGINAL... Pass@1 = 0.0
+  Repairing prompt... [algorithm] Score 56.5 → 48.5, fixed: ['edge_cases']
+  Generating from REPAIRED... Pass@1 = 0.0
+
+======================================================================
+SUMMARY
+======================================================================
+
+Prompt Health Score:
+  Before: 31.5/100
+  After:  51.0/100
+
+Pass@1:
+  Before: 0.59
+  After:  0.65
+
+ID                        Type           Orig    Rep  P@1 Orig   P@1 Rep      Δ
+--------------------------------------------------------------------------------
+student-manual-001        algorithm       0.0   27.5       1.0       1.0   +0.0
+student-manual-002        algorithm       8.5   37.0       1.0       1.0   +0.0
+student-manual-003        algorithm      15.5   60.2       1.0       1.0   +0.0
+student-manual-004        algorithm      18.5   59.8       1.0       1.0   +0.0
+student-001               general        22.8   55.0       1.0       1.0   +0.0
+custom-001                software       32.8   57.5       1.0       1.0   +0.0
+custom-002                software       42.5   54.0       0.0       0.0   +0.0
+custom-003                software       33.8   67.5       0.0       0.0   +0.0
+custom-004                software       30.8   68.0       0.0       1.0   +1.0
+custom-005                software       36.2   59.5      0.33      0.33   +0.0
+lcb-001                   algorithm      41.5   41.5       0.0       0.0   +0.0
+lcb-006                   algorithm      30.5   51.2       0.0       0.0   +0.0
+lcb-010                   general        29.2   30.8       1.0       1.0   +0.0
+lcb-015                   algorithm      47.0   47.0       1.0       1.0   +0.0
+lcb-024                   algorithm      37.5   46.0      0.33      0.33   +0.0
+lcb-032                   algorithm      46.5   50.8       1.0       1.0   +0.0
+lcb-033                   general        37.0   56.5       1.0       1.0   +0.0
+lcb-035                   algorithm      56.5   48.5       0.0       0.0   +0.0
