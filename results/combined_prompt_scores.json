@@ -4,7 +4,7 @@
     "title": "A. Short Sort",
     "source": "livecodebench",
     "prompt": "There are three cards with letters $\\texttt{a}$, $\\texttt{b}$, $\\texttt{c}$ placed in a row in some order. You can do the following operation at most once: \n\n \n-  Pick two cards, and swap them.  Is it possible that the row becomes $\\texttt{abc}$ after the operation? Output \"YES\" if it is possible, and \"NO\" otherwise.\n\nInput\n\nThe first line contains a single integer $t$ ($1 \\leq t \\leq 6$)\u00a0\u2014 the number of test cases.\n\nThe only line of each test case contains a single string consisting of each of the three characters $\\texttt{a}$, $\\texttt{b}$, and $\\texttt{c}$ exactly once, representing the cards.\n\nOutput\n\nFor each test case, output \"YES\" if you can make the row $\\texttt{abc}$ with at most one operation, or \"NO\" otherwise.\n\nYou can output the answer in any case (for example, the strings \"yEs\", \"yes\", \"Yes\" and \"YES\" will be recognized as a positive answer).Sample Input 1:\n6\n\nabc\n\nacb\n\nbac\n\nbca\n\ncab\n\ncba\n\n\n\nSample Output 1:\n\nYES\nYES\nYES\nNO\nNO\nYES\n\n\nNote\n\nIn the first test case, we don't need to do any operations, since the row is already $\\texttt{abc}$.\n\nIn the second test case, we can swap $\\texttt{c}$ and $\\texttt{b}$: $\\texttt{acb} \\to \\texttt{abc}$.\n\nIn the third test case, we can swap $\\texttt{b}$ and $\\texttt{a}$: $\\texttt{bac} \\to \\texttt{abc}$.\n\nIn the fourth test case, it is impossible to make $\\texttt{abc}$ using at most one operation.",
-    "overall_health": 36.2,
+    "overall_health": 41.5,
     "breakdown": {
       "clarity": 55,
       "error_handling": 0,
@@ -139,7 +139,7 @@
     "title": "number-of-senior-citizens",
     "source": "livecodebench",
     "prompt": "You are given a 0-indexed array of strings details. Each element of details provides information about a given passenger compressed into a string of length 15. The system is such that:\n\nThe first ten characters consist of the phone number of passengers.\nThe next character denotes the gender of the person.\nThe following two characters are used to indicate the age of the person.\nThe last two characters determine the seat allotted to that person.\n\nReturn the number of passengers who are strictly more than 60 years old.\n \nExample 1:\n\nInput: details = [\"7868190130M7522\",\"5303914400F9211\",\"9273338290F4010\"]\nOutput: 2\nExplanation: The passengers at indices 0, 1, and 2 have ages 75, 92, and 40. Thus, there are 2 people who are over 60 years old.\n\nExample 2:\n\nInput: details = [\"1313579440F2036\",\"2921522980M5644\"]\nOutput: 0\nExplanation: None of the passengers are older than 60.\n\n \nConstraints:\n\n1 <= details.length <= 100\ndetails[i].length == 15\ndetails[i] consists of digits from '0' to '9'.\ndetails[i][10] is either 'M' or 'F' or 'O'.\nThe phone numbers and seat numbers of the passengers are distinct.",
-    "overall_health": 22.5,
+    "overall_health": 29.2,
     "breakdown": {
       "clarity": 50,
       "error_handling": 0,
@@ -229,7 +229,7 @@
     "title": "count-of-integers",
     "source": "livecodebench",
     "prompt": "You are given two numeric strings num1 and num2 and two integers max_sum and min_sum. We denote an integer x to be good if:\n\nnum1 <= x <= num2\nmin_sum <= digit_sum(x) <= max_sum.\n\nReturn the number of good integers. Since the answer may be large, return it modulo 10^9 + 7.\nNote that digit_sum(x) denotes the sum of the digits of x.\n \nExample 1:\n\nInput: num1 = \"1\", num2 = \"12\", min_sum = 1, max_sum = 8\nOutput: 11\nExplanation: There are 11 integers whose sum of digits lies between 1 and 8 are 1,2,3,4,5,6,7,8,10,11, and 12. Thus, we return 11.\n\nExample 2:\n\nInput: num1 = \"1\", num2 = \"5\", min_sum = 1, max_sum = 5\nOutput: 5\nExplanation: The 5 integers whose sum of digits lies between 1 and 5 are 1,2,3,4, and 5. Thus, we return 5.\n\n \nConstraints:\n\n1 <= num1 <= num2 <= 10^22\n1 <= min_sum <= max_sum <= 400",
-    "overall_health": 29.2,
+    "overall_health": 33.0,
     "breakdown": {
       "clarity": 50,
       "error_handling": 0,
@@ -469,7 +469,7 @@
     "title": "remove-trailing-zeros-from-a-string",
     "source": "livecodebench",
     "prompt": "Given a positive integer num represented as a string, return the integer num without trailing zeros as a string.\n \nExample 1:\n\nInput: num = \"51230100\"\nOutput: \"512301\"\nExplanation: Integer \"51230100\" has 2 trailing zeros, we remove them and return integer \"512301\".\n\nExample 2:\n\nInput: num = \"123\"\nOutput: \"123\"\nExplanation: Integer \"123\" has no trailing zeros, we return integer \"123\".\n\n \nConstraints:\n\n1 <= num.length <= 1000\nnum consists of only digits.\nnum doesn't have any leading zeros.",
-    "overall_health": 41.8,
+    "overall_health": 46.5,
     "breakdown": {
       "clarity": 90,
       "error_handling": 0,
@@ -499,7 +499,7 @@
     "title": "minimize-string-length",
     "source": "livecodebench",
     "prompt": "Given a 0-indexed string s, repeatedly perform the following operation any number of times:\n\nChoose an index i in the string, and let c be the character in position i. Delete the closest occurrence of c to the left of i (if any) and the closest occurrence of c to the right of i (if any).\n\nYour task is to minimize the length of s by performing the above operation any number of times.\nReturn an integer denoting the length of the minimized string.\n \nExample 1:\n\nInput: s = \"aaabc\"\nOutput: 3\nExplanation: In this example, s is \"aaabc\". We can start by selecting the character 'a' at index 1. We then remove the closest 'a' to the left of index 1, which is at index 0, and the closest 'a' to the right of index 1, which is at index 2. After this operation, the string becomes \"abc\". Any further operation we perform on the string will leave it unchanged. Therefore, the length of the minimized string is 3.\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: 3\nExplanation: For this we can start with character 'b' at index 1. There is no occurrence of 'b' to the left of index 1, but there is one to the right at index 2, so we delete the 'b' at index 2. The string becomes \"cbd\" and further operations will leave it unchanged. Hence, the minimized length is 3. \n\nExample 3:\n\nInput: s = \"dddaaa\"\nOutput: 2\nExplanation: For this, we can start with the character 'd' at index 1. The closest occurrence of a 'd' to its left is at index 0, and the closest occurrence of a 'd' to its right is at index 2. We delete both index 0 and 2, so the string becomes \"daaa\". In the new string, we can select the character 'a' at index 2. The closest occurrence of an 'a' to its left is at index 1, and the closest occurrence of an 'a' to its right is at index 3. We delete both of them, and the string becomes \"da\". We cannot minimize this further, so the minimized length is 2.\n\n \n \nConstraints:\n\n1 <= s.length <= 100\ns contains only lowercase English letters",
-    "overall_health": 32.0,
+    "overall_health": 36.5,
     "breakdown": {
       "clarity": 65,
       "error_handling": 0,
@@ -724,7 +724,7 @@
     "title": "Find Duplicates",
     "source": "studenteval",
     "prompt": "find all duplicate numbers in a list",
-    "overall_health": 13.8,
+    "overall_health": 15.5,
     "breakdown": {
       "clarity": 35,
       "error_handling": 0,
@@ -748,5 +748,7 @@
       "testability": 0,
       "edge_cases": 0
     }
+
+  
   }
 ]

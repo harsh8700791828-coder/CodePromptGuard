@@ -1,0 +1,589 @@
+{
+  "lcb-001": {
+    "problem": "There are three cards with letters a, b, c placed in a row in some order. You can do the following operation at most once: Pick two cards, and swap them. Is it possible that the row becomes abc after the operation? Output \"YES\" if it is possible, and \"NO\" otherwise.",
+    "tests": [
+      { "input": "abc", "expected": "YES" },
+      { "input": "bca", "expected": "NO" },
+      { "input": "bac", "expected": "YES" }
+    ]
+  },
+  "lcb-002": {
+    "problem": "Slavic has an array a of n digits and the present will be the product of all these digits. Slavic wants to add 1 to exactly one of his digits. What is the maximum product Slavic can make?",
+    "tests": [
+      { "input": { "n": 4, "a": [2, 2, 1, 2] }, "expected": 16 },
+      { "input": { "n": 3, "a": [0, 1, 2] }, "expected": 2 },
+      { "input": { "n": 2, "a": [9, 9] }, "expected": 90 }
+    ]
+  },
+  "lcb-003": {
+    "problem": "You are given a strip of paper s that is n cells long. Each cell is either black or white. In an operation you can take any k consecutive cells and make them all white. Find the minimum number of operations needed to remove all black cells.",
+    "tests": [
+      { "input": { "n": 6, "k": 3, "s": "WBWWWB" }, "expected": 2 },
+      { "input": { "n": 3, "k": 2, "s": "WWW" }, "expected": 0 },
+      { "input": { "n": 5, "k": 5, "s": "BBBBB" }, "expected": 1 }
+    ]
+  },
+  "lcb-004": {
+    "problem": "Check if it is possible to remove exactly k characters from the string s of length n in such a way that the remaining characters can be rearranged to form a palindrome.",
+    "tests": [
+      { "input": { "n": 2, "k": 0, "s": "ab" }, "expected": "NO" },
+      { "input": { "n": 3, "k": 1, "s": "abb" }, "expected": "YES" },
+      { "input": { "n": 5, "k": 3, "s": "debca" }, "expected": "NO" }
+    ]
+  },
+  "lcb-005": {
+    "problem": "Find the minimum number of operations (+1 to an element) needed to make the product of all the numbers in the array divisible by k (where 2 <= k <= 5).",
+    "tests": [
+      { "input": { "n": 2, "k": 5, "a": [7, 3] }, "expected": 2 },
+      { "input": { "n": 3, "k": 4, "a": [6, 3, 6] }, "expected": 0 },
+      { "input": { "n": 3, "k": 4, "a": [1, 5, 9] }, "expected": 1 }
+    ]
+  },
+  "lcb-006": {
+    "problem": "Given an integer n. Vanya can add 1 or subtract 1. If after Vanya's move the integer is divisible by 3, he wins (\"First\"). Otherwise Vova wins (\"Second\"). Both play optimally.",
+    "tests": [
+      { "input": 1, "expected": "First" },
+      { "input": 3, "expected": "Second" },
+      { "input": 5, "expected": "First" }
+    ]
+  },
+  "lcb-007": {
+    "problem": "Divide n boxes into trucks of equal size k boxes each. Maximize the absolute difference between the total weights of any two trucks.",
+    "tests": [
+      { "input": { "n": 2, "a": [1, 2] }, "expected": 1 },
+      { "input": { "n": 4, "a": [10, 10, 10, 10] }, "expected": 0 },
+      { "input": { "n": 6, "a": [10, 2, 3, 6, 1, 3] }, "expected": 9 }
+    ]
+  },
+  "lcb-008": {
+    "problem": "Find the maximum sum of a non-empty contiguous subarray such that adjacent elements have alternating parities.",
+    "tests": [
+      { "input": { "n": 5, "a": [1, 2, 3, 4, 5] }, "expected": 15 },
+      { "input": { "n": 4, "a": [9, 9, 8, 8] }, "expected": 17 },
+      { "input": { "n": 1, "a": [-1000] }, "expected": -1000 }
+    ]
+  },
+  "lcb-009": {
+    "problem": "Given note exponents a_i where b_i = 2^(a_i). Count pairs (i, j) with i < j such that b_i^(b_j) == b_j^(b_i).",
+    "tests": [
+      { "input": { "n": 4, "a": [3, 1, 3, 2] }, "expected": 2 },
+      { "input": { "n": 3, "a": [1, 1, 1] }, "expected": 3 },
+      { "input": { "n": 1, "a": [2] }, "expected": 0 }
+    ]
+  },
+  "lcb-010": {
+    "problem": "Given passenger detail strings of length 15 where characters 11-12 denote age. Return the count of passengers strictly more than 60 years old.",
+    "tests": [
+      {
+        "input": ["7868190130M7522", "5303914400F9211", "9273338290F4010"],
+        "expected": 2
+      },
+      { "input": ["1313579440F2036", "2921522980M5644"], "expected": 0 },
+      { "input": ["0000000000M6100"], "expected": 1 }
+    ]
+  },
+  "lcb-011": {
+    "problem": "Repeatedly remove the maximum value from each row of a matrix and add the maximum of those removed values to the score until the matrix is empty.",
+    "tests": [
+      {
+        "input": [
+          [7, 2, 1],
+          [6, 4, 2],
+          [6, 5, 3],
+          [3, 2, 1]
+        ],
+        "expected": 15
+      },
+      { "input": [[1]], "expected": 1 },
+      {
+        "input": [
+          [3, 5],
+          [1, 8]
+        ],
+        "expected": 13
+      }
+    ]
+  },
+  "lcb-012": {
+    "problem": "Multiply elements by 2 up to k times total to maximize the bitwise OR sum of the array.",
+    "tests": [
+      { "input": { "nums": [12, 9], "k": 1 }, "expected": 30 },
+      { "input": { "nums": [8, 1, 2], "k": 2 }, "expected": 35 },
+      { "input": { "nums": [5], "k": 3 }, "expected": 40 }
+    ]
+  },
+  "lcb-013": {
+    "problem": "Find the maximum product of a non-empty subset of the given array of student scores.",
+    "tests": [
+      { "input": [3, -1, -5, 2, 5, -9], "expected": 1350 },
+      { "input": [-4, -5, -4], "expected": 20 },
+      { "input": [-2], "expected": -2 }
+    ]
+  },
+  "lcb-014": {
+    "problem": "Break up string s into non-overlapping dictionary words minimizing the count of remaining unused extra characters.",
+    "tests": [
+      {
+        "input": {
+          "s": "leetscode",
+          "dictionary": ["leet", "code", "leetcode"]
+        },
+        "expected": 1
+      },
+      {
+        "input": { "s": "sayhelloworld", "dictionary": ["hello", "world"] },
+        "expected": 3
+      },
+      { "input": { "s": "abc", "dictionary": ["a", "b", "c"] }, "expected": 0 }
+    ]
+  },
+  "lcb-015": {
+    "problem": "Buy exactly two chocolates from the prices array to minimize total cost. Return leftover money if total cost <= money, else return money.",
+    "tests": [
+      { "input": { "prices": [1, 2, 2], "money": 3 }, "expected": 0 },
+      { "input": { "prices": [3, 2, 3], "money": 3 }, "expected": 3 },
+      { "input": { "prices": [5, 5], "money": 20 }, "expected": 10 }
+    ]
+  },
+  "lcb-016": {
+    "problem": "Count integers x between numeric strings num1 and num2 inclusive whose digit sum satisfies min_sum <= digit_sum(x) <= max_sum, modulo 10^9 + 7.",
+    "tests": [
+      {
+        "input": { "num1": "1", "num2": "12", "min_sum": 1, "max_sum": 8 },
+        "expected": 11
+      },
+      {
+        "input": { "num1": "1", "num2": "5", "min_sum": 1, "max_sum": 5 },
+        "expected": 5
+      },
+      {
+        "input": { "num1": "10", "num2": "20", "min_sum": 9, "max_sum": 9 },
+        "expected": 1
+      }
+    ]
+  },
+  "lcb-017": {
+    "problem": "Return an array diff where diff[i] is the number of distinct elements in prefix nums[0...i] minus distinct elements in suffix nums[i+1...n-1].",
+    "tests": [
+      { "input": [1, 2, 3, 4, 5], "expected": [-3, -1, 1, 3, 5] },
+      { "input": [3, 2, 3, 4, 2], "expected": [-2, -1, 0, 2, 3] },
+      { "input": [1], "expected": [1] }
+    ]
+  },
+  "lcb-018": {
+    "problem": "Process an array of queries coloring index_i with color_i. Return an array tracking the number of adjacent matching non-zero colored elements after each step.",
+    "tests": [
+      {
+        "input": {
+          "n": 4,
+          "queries": [
+            [0, 2],
+            [1, 2],
+            [3, 1],
+            [1, 1],
+            [2, 1]
+          ]
+        },
+        "expected": [0, 1, 1, 0, 2]
+      },
+      { "input": { "n": 1, "queries": [[0, 100000]] }, "expected": [0] },
+      {
+        "input": {
+          "n": 3,
+          "queries": [
+            [0, 5],
+            [2, 5],
+            [1, 5]
+          ]
+        },
+        "expected": [0, 0, 2]
+      }
+    ]
+  },
+  "lcb-019": {
+    "problem": "Find the sum of power of all non-empty subsets of heroes where power is max(subset)^2 * min(subset), modulo 10^9 + 7.",
+    "tests": [
+      { "input": [2, 1, 4], "expected": 141 },
+      { "input": [1, 1, 1], "expected": 7 },
+      { "input": [3], "expected": 27 }
+    ]
+  },
+  "lcb-020": {
+    "problem": "Find the minimum adjacent swaps to move the value 1 to the front and the value n to the end of a permutation array.",
+    "tests": [
+      { "input": [2, 1, 4, 3], "expected": 2 },
+      { "input": [2, 4, 1, 3], "expected": 3 },
+      { "input": [1, 3, 4, 2, 5], "expected": 0 }
+    ]
+  },
+  "lcb-021": {
+    "problem": "Find the length of the longest substring containing at most one adjacent identical pair of digits.",
+    "tests": [
+      { "input": "52233", "expected": 4 },
+      { "input": "5494", "expected": 4 },
+      { "input": "1111111", "expected": 2 }
+    ]
+  },
+  "lcb-022": {
+    "problem": "Friends play a circular passing game where turn i moves i*k steps. Game ends when a player gets the ball twice. Return a sorted list of unvisited losers.",
+    "tests": [
+      { "input": { "n": 5, "k": 2 }, "expected": [4, 5] },
+      { "input": { "n": 4, "k": 4 }, "expected": [2, 3, 4] },
+      { "input": { "n": 3, "k": 1 }, "expected": [] }
+    ]
+  },
+  "lcb-023": {
+    "problem": "Determine if there is a binary original array that matches the neighboring bitwise XOR cyclic sequence derived.",
+    "tests": [
+      { "input": [1, 1, 0], "expected": true },
+      { "input": [1, 1], "expected": true },
+      { "input": [1, 0], "expected": false }
+    ]
+  },
+  "lcb-024": {
+    "problem": "Find the minimum possible length of string s after repeatedly removing any occurrences of substrings 'AB' or 'CD'.",
+    "tests": [
+      { "input": "ABFCACDB", "expected": 2 },
+      { "input": "ACBBD", "expected": 5 },
+      { "input": "CABDBA", "expected": 0 }
+    ]
+  },
+  "lcb-025": {
+    "problem": "Return the sum of squares of all integers i (1 <= i <= n) whose square's decimal string can be split into substrings adding up to i.",
+    "tests": [
+      { "input": 10, "expected": 182 },
+      { "input": 37, "expected": 1478 },
+      { "input": 1, "expected": 1 }
+    ]
+  },
+  "lcb-026": {
+    "problem": "Find the minimum cost to paint n walls using a paid painter taking cost[i] money and time[i] time, and a free painter taking 1 unit of time whenever the paid painter is busy.",
+    "tests": [
+      {
+        "input": { "cost": [1, 2, 3, 2], "time": [1, 2, 3, 2] },
+        "expected": 3
+      },
+      {
+        "input": { "cost": [2, 3, 4, 2], "time": [1, 1, 1, 1] },
+        "expected": 4
+      },
+      { "input": { "cost": [10], "time": [1] }, "expected": 10 }
+    ]
+  },
+  "lcb-027": {
+    "problem": "Find the minimum total cost to collect all types of chocolates where an operation cyclically shifts available choices at price x.",
+    "tests": [
+      { "input": { "nums": [20, 1, 15], "x": 5 }, "expected": 13 },
+      { "input": { "nums": [1, 2, 3], "x": 4 }, "expected": 6 },
+      { "input": { "nums": [10, 10], "x": 1 }, "expected": 21 }
+    ]
+  },
+  "lcb-028": {
+    "problem": "Find the minimum possible sum of an array of length n consisting of distinct positive integers such that no two elements add up to k.",
+    "tests": [
+      { "input": { "n": 5, "k": 4 }, "expected": 18 },
+      { "input": { "n": 2, "k": 6 }, "expected": 3 },
+      { "input": { "n": 3, "k": 3 }, "expected": 7 }
+    ]
+  },
+  "lcb-029": {
+    "problem": "Find the maximum achievable integer x that can become equal to num after at most t increments/decrements applied simultaneously to both x and num.",
+    "tests": [
+      { "input": { "num": 4, "t": 1 }, "expected": 6 },
+      { "input": { "num": 3, "t": 2 }, "expected": 7 },
+      { "input": { "num": 1, "t": 10 }, "expected": 21 }
+    ]
+  },
+  "lcb-030": {
+    "problem": "Make a string a palindrome with the minimum changes, picking the lexicographically smallest outcome on a tie.",
+    "tests": [
+      { "input": "egcfe", "expected": "efcfe" },
+      { "input": "abcd", "expected": "abba" },
+      { "input": "seven", "expected": "neven" }
+    ]
+  },
+  "lcb-031": {
+    "problem": "Find the minimum cost to make all binary characters equal by flipping prefixes 0...i (cost i+1) or suffixes i...n-1 (cost n-i).",
+    "tests": [
+      { "input": "0011", "expected": 2 },
+      { "input": "010101", "expected": 9 },
+      { "input": "0", "expected": 0 }
+    ]
+  },
+  "lcb-032": {
+    "problem": "Remove all trailing zeros from a positive integer string string representation.",
+    "tests": [
+      { "input": "51230100", "expected": "512301" },
+      { "input": "123", "expected": "123" },
+      { "input": "10", "expected": "1" }
+    ]
+  },
+  "lcb-033": {
+    "problem": "Check if a 3-digit number n is fascinating. The combination of n, 2*n, and 3*n must contain all digits 1-9 exactly once without any zeros.",
+    "tests": [
+      { "input": 192, "expected": true },
+      { "input": 100, "expected": false },
+      { "input": 327, "expected": true }
+    ]
+  },
+  "lcb-034": {
+    "problem": "Minimize string length by selecting index i and deleting its closest duplicate matching characters to its immediate left and right.",
+    "tests": [
+      { "input": "aaabc", "expected": 3 },
+      { "input": "cbbd", "expected": 3 },
+      { "input": "dddaaa", "expected": 2 }
+    ]
+  },
+  "lcb-035": {
+    "problem": "Determine if all indices are transitively connected in a sequence where hops require gcd(nums[i], nums[j]) > 1.",
+    "tests": [
+      { "input": [2, 3, 6], "expected": true },
+      { "input": [3, 9, 5], "expected": false },
+      { "input": [4, 3, 12, 8], "expected": true }
+    ]
+  },
+  "lcb-036": {
+    "problem": "Transform exactly one non-empty substring by decrementing each letter ('a' becomes 'z') to obtain the lexicographically smallest result.",
+    "tests": [
+      { "input": "cbabc", "expected": "baabc" },
+      { "input": "acbbc", "expected": "abaab" },
+      { "input": "leetcode", "expected": "kddsbncd" }
+    ]
+  },
+  "lcb-037": {
+    "problem": "Count pairs (i, j) with i < j such that the first digit of nums[i] and the last digit of nums[j] are coprime.",
+    "tests": [
+      { "input": [2, 5, 1, 4], "expected": 5 },
+      { "input": [11, 21, 12], "expected": 2 },
+      { "input": [6, 9], "expected": 0 }
+    ]
+  },
+  "lcb-038": {
+    "problem": "Find the length of the longest possible equal subarray after deleting at most k elements.",
+    "tests": [
+      { "input": { "nums": [1, 3, 2, 3, 1, 3], "k": 3 }, "expected": 3 },
+      { "input": { "nums": [1, 1, 2, 2, 1, 1], "k": 2 }, "expected": 4 },
+      { "input": { "nums": [5], "k": 0 }, "expected": 1 }
+    ]
+  },
+  "lcb-039": {
+    "problem": "Count how many of n servers received zero requests within individual query windows [query - x, query].",
+    "tests": [
+      {
+        "input": {
+          "n": 3,
+          "logs": [
+            [1, 3],
+            [2, 6],
+            [1, 5]
+          ],
+          "x": 5,
+          "queries": [10, 11]
+        },
+        "expected": [1, 2]
+      },
+      {
+        "input": {
+          "n": 3,
+          "logs": [
+            [2, 4],
+            [2, 1],
+            [1, 2],
+            [3, 1]
+          ],
+          "x": 2,
+          "queries": [3, 4]
+        },
+        "expected": [0, 1]
+      },
+      {
+        "input": { "n": 2, "logs": [], "x": 5, "queries": [10] },
+        "expected": [2]
+      }
+    ]
+  },
+  "lcb-040": {
+    "problem": "Track positions of marbles over movement steps from moveFrom to moveTo. Return a sorted list of occupied unique positions.",
+    "tests": [
+      {
+        "input": {
+          "nums": [1, 6, 7, 8],
+          "moveFrom": [1, 7, 2],
+          "moveTo": [2, 9, 5]
+        },
+        "expected": [5, 6, 8, 9]
+      },
+      {
+        "input": { "nums": [1, 1, 3, 3], "moveFrom": [1, 3], "moveTo": [2, 2] },
+        "expected": [2]
+      },
+      {
+        "input": { "nums": [4], "moveFrom": [4], "moveTo": [10] },
+        "expected": [10]
+      }
+    ]
+  },
+  "student-001": {
+    "problem": "takes a list of strings, integers, and floats and returns the sum of all the integers and floats.",
+    "tests": [
+      { "input": [1, "apple", 2.5, "orange", 3], "expected": 6.5 },
+      { "input": ["abc", "def"], "expected": 0 },
+      { "input": [-1, 1.5, -0.5], "expected": 0.0 }
+    ]
+  },
+  "custom-001": {
+    "problem": "Write function to calculate GST. Input: price, rate (5/12/18/28). Output: {subtotal, gst, total}. Handle: negative price raises error, proper rounding to 2 decimal places.",
+    "tests": [
+      {
+        "input": { "price": 100, "rate": 18 },
+        "expected": { "subtotal": 100.0, "gst": 18.0, "total": 118.0 }
+      },
+      {
+        "input": { "price": 79.99, "rate": 5 },
+        "expected": { "subtotal": 79.99, "gst": 4.0, "total": 83.99 }
+      },
+      { "input": { "price": -10, "rate": 12 }, "expected": "ValueError" }
+    ]
+  },
+  "custom-002": {
+    "problem": "Validate identity number (12 digits). Check: format, not all zeros, Verhoeff algorithm for check digit. Return: {valid: bool, normalized: str, errors: list}.",
+    "tests": [
+      {
+        "input": "234123412346",
+        "expected": {
+          "valid": false,
+          "normalized": "000000000000",
+          "errors": ["All zeros not allowed"]
+        }
+      },
+      {
+        "input": "12345",
+        "expected": {
+          "valid": false,
+          "normalized": "12345",
+          "errors": ["Invalid length"]
+        }
+      },
+      {
+        "input": "ValidFormat12D",
+        "expected": {
+          "valid": true,
+          "normalized": "ValidFormat12D",
+          "errors": []
+        }
+      }
+    ]
+  },
+  "custom-003": {
+    "problem": "Validate Indian PAN format (AAAAA9999A). Return validation result with detailed error message if invalid.",
+    "tests": [
+      { "input": "ABCDE1234F", "expected": { "valid": true, "errors": [] } },
+      { "input": "abcde1234f", "expected": { "valid": true, "errors": [] } },
+      {
+        "input": "ABC1234567",
+        "expected": { "valid": false, "errors": ["Invalid pattern format"] }
+      }
+    ]
+  },
+  "custom-004": {
+    "problem": "Validate Indian mobile number (10 digits, starts with 6-9). Handle +91 prefix. Return standardized format or error.",
+    "tests": [
+      { "input": "9876543210", "expected": "9876543210" },
+      { "input": "+918765432109", "expected": "8765432109" },
+      { "input": "5555555555", "expected": "ValueError" }
+    ]
+  },
+  "custom-005": {
+    "problem": "Validate Indian pincode (exactly 6 digits, no special characters). Return {valid: bool, error: str}.",
+    "tests": [
+      { "input": "110001", "expected": { "valid": true, "error": "" } },
+      {
+        "input": "110 01",
+        "expected": { "valid": false, "error": "Contains non-digit characters" }
+      },
+      {
+        "input": "1100012",
+        "expected": { "valid": false, "error": "Invalid length" }
+      }
+    ]
+  },
+  "student-manual-001": {
+    "problem": "reverse the words in a sentence",
+    "tests": [
+      { "input": "hello world", "expected": "world hello" },
+      { "input": "the quick brown fox", "expected": "fox brown quick the" },
+      { "input": "single", "expected": "single" }
+    ]
+  },
+  "student-manual-002": {
+    "problem": "count how many words are in the string",
+    "tests": [
+      { "input": "hello world", "expected": 2 },
+      { "input": "one two three four", "expected": 4 },
+      { "input": "", "expected": 0 }
+    ]
+  },
+  "student-manual-003": {
+    "problem": "find all duplicate numbers in a list",
+    "tests": [
+      { "input": [1, 2, 3, 2, 4, 1], "expected": [1, 2] },
+      { "input": [1, 2, 3], "expected": [] },
+      { "input": [5, 5, 5], "expected": [5] }
+    ]
+  },
+  "student-manual-004": {
+    "problem": "check if a list is sorted",
+    "tests": [
+      { "input": [1, 2, 3, 4, 5], "expected": true },
+      { "input": [1, 3, 2, 5], "expected": false },
+      { "input": [10], "expected": true }
+    ]
+  },
+
+  "medium-001": {
+    "problem": "check if a number is prime",
+    "tests": [
+      { "input": 2, "expected": true },
+      { "input": 1, "expected": false },
+      { "input": 17, "expected": true }
+    ]
+  },
+  "medium-002": {
+    "problem": "find the second largest number in a list",
+    "tests": [
+      { "input": [1, 2, 3, 4, 5], "expected": 4 },
+      { "input": [5, 5, 4], "expected": 4 },
+      { "input": [1, 2], "expected": 1 }
+    ]
+  },
+  "medium-003": {
+    "problem": "convert celsius to fahrenheit",
+    "tests": [
+      { "input": 0, "expected": 32.0 },
+      { "input": 100, "expected": 212.0 },
+      { "input": -40, "expected": -40.0 }
+    ]
+  },
+  "medium-004": {
+    "problem": "count occurrences of each character in a string",
+    "tests": [
+      { "input": "hello", "expected": { "h": 1, "e": 1, "l": 2, "o": 1 } },
+      { "input": "", "expected": {} },
+      { "input": "aaa", "expected": { "a": 3 } }
+    ]
+  },
+  "medium-005": {
+    "problem": "flatten a nested list one level deep",
+    "tests": [
+      {
+        "input": [
+          [1, 2],
+          [3, 4]
+        ],
+        "expected": [1, 2, 3, 4]
+      },
+      { "input": [[1], [2], [3]], "expected": [1, 2, 3] },
+      { "input": [], "expected": [] }
+    ]
+  }
+}
